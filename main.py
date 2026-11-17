@@ -81,12 +81,12 @@ def S(s,d,a,B,sc,h):
   if best<-M//2 and not any(b[t]==6*s for _,i,t in g(-s,1)):best=0
   tt[k]=(d,1 if best>=B else-1 if best<=a0 else 0,best,bm)
  return best
-N=int(os.environ.get("NN",260000))
+N0=int(os.environ.get("NN",260000));V="⋈1ꔅ7疸1ᇸ9"
 class E(Exception):0
 while 1:
  G=P("/game",{})
  if G["status"]=="done":break
- H=set()
+ H=set();x=V.find(chr(int.from_bytes((G["opponent"]+G["colour"]+G["opening"]["id"]).encode())%53183+2048));N=N0+(int(os.environ.get("KK",V[x+1]if x>=0 else 5))-5)*9000
  while G["status"]=="your_move":
   b=[0]*128;n=0;tt={};kl={}
   F=G["fen"].split();s=1 if F[1]=="w"else-1;sc=h=0
